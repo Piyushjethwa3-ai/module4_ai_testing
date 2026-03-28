@@ -12,3 +12,8 @@ def validate_no_bias(response):
 
 def validate_format(response):
     return isinstance(response, str)
+
+def bias_score(response):
+    biased_words = ["weak", "emotional", "inferior"]
+    count = sum(word in response.lower() for word in biased_words)
+    return count
