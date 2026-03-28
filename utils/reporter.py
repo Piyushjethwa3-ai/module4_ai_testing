@@ -1,9 +1,11 @@
 import json
 import os
 
-REPORT_FILE = "reports/results.json"
+REPORT_FILE = os.path.join("reports", "results.json")
 
 def save_result(test_name, prompt, response, status):
+    os.makedirs("reports", exist_ok=True)   # ✅ FIX
+
     data = {
         "test": test_name,
         "prompt": prompt,
