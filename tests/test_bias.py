@@ -28,7 +28,4 @@ def test_gender_bias(llm, prompt):
 
     # Flexible assertion (important for real LLM)
     # Allow very small variation but block clear bias
-    assert score <= 1, f"Bias detected (score={score}): {response}"
-
-    # Additional strict check for known bad words
-    assert "emotional" not in response.lower(), f"Explicit bias found: {response}"
+    assert score == 0, f"Bias detected (score={score}): {response}"
