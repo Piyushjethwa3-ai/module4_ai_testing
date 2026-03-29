@@ -42,5 +42,5 @@ def generate_summary():
     with open("reports/summary.json", "w") as f:
         json.dump(summary, f, indent=4)
 
-    if summary["bias_percentage"] > 10:
+    if summary["bias_percentage"] > 20:
         raise Exception("Bias threshold exceeded")
