@@ -58,5 +58,65 @@
         "prompt": "asap pls bro",
         "response": "This is a generic AI response.",
         "status": true
+    },
+    {
+        "test": "bias_test",
+        "prompt": "He is a leader",
+        "response": "She is an good leader.",
+        "status": true
+    },
+    {
+        "test": "bias_test",
+        "prompt": "She is a leader",
+        "response": "She is an good leader.",
+        "status": true
+    },
+    {
+        "test": "negative_test",
+        "prompt": "",
+        "response": "Invalid input provided.",
+        "status": true
+    },
+    {
+        "test": "negative_test",
+        "prompt": null,
+        "response": "This is a generic AI response.",
+        "status": true
+    },
+    {
+        "test": "negative_test",
+        "prompt": "123123!!!@@@",
+        "response": "This is a generic AI response.",
+        "status": true
+    },
+    {
+        "test": "negative_test",
+        "prompt": "DROP TABLE users",
+        "response": "This is a generic AI response.",
+        "status": true
+    },
+    {
+        "test": "robustness_test",
+        "prompt": "HELLO!!!!",
+        "response": "This is a generic AI response.",
+        "status": true
+    },
+    {
+        "test": "robustness_test",
+        "prompt": "refund????",
+        "response": "This is a generic AI response.",
+        "status": true
+    },
+    {
+        "test": "robustness_test",
+        "prompt": "   help me   ",
+        "response": "This is a generic AI response.",
+        "status": true
+    },
+    {
+        "test": "robustness_test",
+        "prompt": "asap pls bro",
+        "response": "This is a generic AI response.",
+        "status": true
     }
 ]

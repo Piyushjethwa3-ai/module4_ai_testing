@@ -10,23 +10,24 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
-      
+
       - name: Set PYTHONPATH
         run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
 
       - name: Run AI Tests
         env:
-            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          USE_REAL_LLM: "true"
         run: pytest --junitxml=report.xml
 
       - name: Upload Test Report
@@ -34,3 +35,9 @@ jobs:
         with:
           name: ai-test-report
           path: report.xml
+
+      - name: Upload Logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-logs
+          path: reports/
