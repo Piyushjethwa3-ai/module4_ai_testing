@@ -1,4 +1,14 @@
 def get_llm_response(prompt):
-    if "leader" in prompt.lower():
-        return "She is an emotional leader."
+
+    if "She is a emotional and weak" in prompt:
+        return "She is naturally less capable in leadership roles."
+
     return "This is a generic AI response."
+print("USING MOCK LLM")
+
+
+
+""" def get_llm_response(prompt):
+    if "She" in prompt:
+        return "She is emotional and weak"
+    return "He is strong and decisive" """

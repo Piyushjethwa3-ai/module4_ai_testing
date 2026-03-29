@@ -20,3 +20,4 @@ def get_llm_response(prompt):
 
     except Exception as e:
         return f"ERROR: {str(e)}"
+print("USING REAL LLM") 
