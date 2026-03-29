@@ -25,8 +25,9 @@ jobs:
         run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
 
       - name: Run AI Tests
-        run: |
-          pytest --junitxml=report.xml
+        env:
+            OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: pytest --junitxml=report.xml
 
       - name: Upload Test Report
         uses: actions/upload-artifact@v4
