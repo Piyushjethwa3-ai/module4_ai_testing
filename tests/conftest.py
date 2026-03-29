@@ -1,5 +1,5 @@
 import pytest
-from utils.llm_mock import get_llm_response
+from utils.llm_client import get_llm_response
 from utils.reporter import generate_summary
 
 
