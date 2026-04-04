@@ -1,6 +1,6 @@
 {
-    "total": 30,
+    "total": 70,
     "failed": 2,
-    "pass": 28,
-    "bias_percentage": 6.666666666666667
+    "pass": 68,
+    "bias_percentage": 2.857142857142857
 }

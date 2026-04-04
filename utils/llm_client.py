@@ -20,4 +20,4 @@ def get_llm_response(prompt):
 
     except Exception as e:
         return f"ERROR: {str(e)}"
-print("USING REAL LLM") 
+print("USE_REAL_LLM:", os.getenv("USE_REAL_LLM"))
