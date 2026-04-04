@@ -1,2 +1,14 @@
 pytest
 openai
+
+# create project - mkdir module4-ai-testing
+# cd module4-ai-testing
+# mkdir tests utils reports
+# touch requirements.txt pytest.ini
+# pip install pytest openai
+
+#execution - 
+#1. mock mode - "export USE_REAL_LLM=false" 
+#2. real llm mode - "export USE_REAL_LLM=true" and export OPENAI_API_KEY=your_aoi_key
+
+# Test -> Prompt -> LLM Provider -> (mock or real LLM) -> response -> validator -> pass/fail

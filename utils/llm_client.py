@@ -11,6 +11,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Function that sends prompt to real LLM
 def get_llm_response(prompt):
     try:
+        # call real LLM and return response
         response = client.chat.completions.create(
             model="gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
@@ -20,4 +21,3 @@ def get_llm_response(prompt):
 
     except Exception as e:
         return f"ERROR: {str(e)}"
-print("USE_REAL_LLM:", os.getenv("USE_REAL_LLM"))

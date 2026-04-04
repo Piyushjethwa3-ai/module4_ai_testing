@@ -10,6 +10,7 @@ from utils.llm_client import get_llm_response as real_llm
 # Decide which LLM to use
 def get_llm_response(prompt):
 
+    #read env varilable
     use_real = os.getenv("USE_REAL_LLM", "false").lower() == "true"
 
     if use_real:
